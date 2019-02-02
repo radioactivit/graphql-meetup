@@ -1,0 +1,27 @@
+type Manga {
+  id: ID! @unique
+  title: String! @unique
+  category: Category!
+  author: Author!
+  volumes: [Volume!]!
+}
+
+type Author {
+  id: ID! @unique
+  name: String! @unique
+  bio: String
+  mangas: [Manga!]!
+}
+
+type Volume {
+  id: ID! @unique
+  title: String! @unique
+  number: Int!
+  manga: Manga!
+}
+
+type Category {
+  id: ID! @unique
+  name: String! @unique
+  mangas: [Manga!]!
+}
