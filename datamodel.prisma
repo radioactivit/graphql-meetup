@@ -15,7 +15,7 @@ type Author {
 
 type Volume {
   id: ID! @unique
-  title: String! @unique
+  title: String!
   number: Int!
   manga: Manga!
 }
